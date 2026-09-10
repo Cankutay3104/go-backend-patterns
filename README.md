@@ -101,16 +101,45 @@ Every implementation in this repository adheres to five non-negotiable rules:
 
 ---
 
-## Verification
+## Getting Started
 
-Run all test suites across the repository:
+### Prerequisites
+* Go 1.22+ (Zero external dependencies required)
+* Git
 
+### Installation
+Clone the repository:
+```bash
+git clone https://github.com/Cankutay3104/go-backend-patterns.git
+cd go-backend-patterns
+```
+
+### Running Verification Suites
+Run all unit tests across the repository with race detection:
 ```bash
 go test -v -race ./...
 ```
 
-Run benchmarks reporting memory allocations:
+Run leak detection and assertions for an isolated package (e.g., workerpool):
+```bash
+go test -v -race ./concurrency/workerpool/...
+```
 
+Run microbenchmarks with memory allocation analysis:
 ```bash
 go test -v -bench=. -benchmem ./...
 ```
+
+---
+
+## Author
+
+**Cankutay Mutlu**
+* GitHub: [@Cankutay3104](https://github.com/Cankutay3104)
+* LinkedIn: [Cankutay Mutlu](https://linkedin.com/in/cankutay-mutlu-712460295/)
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
